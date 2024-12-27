@@ -1,0 +1,284 @@
+html,body {
+    background-color: #f4f2f3;
+    max-width: 100%;
+    overflow-x: clip;
+   
+}
+small{
+    color:  red;
+    font-size: 1.1em;
+}
+i{
+    font-size: 25px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem;
+
+}
+
+.navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+
+}
+
+
+.navbar-nav .nav-link {
+    transition: all 0.5s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f5a841;
+    border-bottom: #48443e dotted 0.5px;
+}
+
+
+
+/* Hero section reszponzív stílusok */
+.hero {
+    position: relative;
+    background: url(media/banner.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 60vh;
+    padding: 6rem 0 3rem;
+    margin-bottom: 5.5rem;
+    
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 26, 22, .7);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    color: #f4f2f3;
+}
+
+.hero-img {
+    height: auto;
+    max-width: 70%;
+    margin-top: 2rem;
+    position: relative;
+    top: 120px;
+}
+
+.parallax{
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+
+.parallax .parallax_child{
+    background-image: url(media/bg.png); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+/* About section reszponzív stílusok */
+.about img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+/* Studies section reszponzív stílusok */
+
+.studies ul {
+
+    padding: 2rem 2rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.studies li {
+    margin-bottom: 1rem;
+
+
+}
+
+.animate-list {
+
+    padding: 0;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.84s ease-out;
+}
+
+.slide-in.active {
+    opacity: 0.89;
+    transform: translateX(0);
+}
+
+/* Késleltetett animáció minden következő elemnek */
+.slide-in:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.slide-in:nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.slide-in:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.slide-in:nth-child(5) {
+    transition-delay: 0.6s;
+}
+
+.slide-in:nth-child(6) {
+    transition-delay: 0.8s;
+}
+
+.slide-in:nth-child(7) {
+    transition-delay: 1s;
+}
+
+section:nth-child(4n) {
+    background-color: #f4f2f3;
+   
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Delayed animation for help section list items */
+.slide-in-right:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.slide-in-right:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.slide-in-right:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.slide-in-right:nth-child(4) {
+    transition-delay: 0.6s;
+}
+/* Help section reszponzív stílusok */
+.helptou {
+    
+    padding: 4rem 0;
+    margin: 3rem 0;
+}
+
+.helptou img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer reszponzív stílusok */
+footer {
+    width: 100%;   
+    bottom: 20px;
+    margin-top: auto;
+
+}
+
+footer .container>h2 {
+    text-transform: uppercase;
+}
+
+.footer-bord {
+    max-width: 1024px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%);
+    padding: 2em 0;
+}
+
+.footerdata{
+    background-color: #8e8381;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    width: 100%;
+    position: absolute;
+}
+
+.footerdata p:nth-child(1){
+    line-height: 3rem;
+}
+.fs6{
+    font-size: 0.8rem;
+}
+/* Media queries */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding-top: 5rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-img {
+        margin: 2rem auto;
+
+    }
+    
+    .about h2,
+    .studies h2 {
+        text-align: center;
+    }
+    
+    .helptou {
+        padding: 2rem 0;
+    }
+    .spacer {
+        display: none;
+    }
+
+    .pt-5 {
+        padding-top: 2rem; 
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .footer-bord {
+        padding: 1.5rem;
+    }
+}
