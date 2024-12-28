@@ -4,18 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="HandheldFriendly" content="true">
-    <meta name="robots" content="all">
+    <meta name="robots"
+        content="all,pszichiáter, autizmus, gyermekpszichológia, diagnosztika, Budapest,adhd,ad-hd,gyerek,pszi">
     <meta http-equiv="Cache-control" content="public">
-    <meta name="theme-color" content="#5F545A">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#5F545A">
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="description" content="Dr. Szerző Nelli gyermek- és ifjúságpszichiáter szakmai bemutatkozó oldala.">
-    <meta name="keywords" content="pszichiáter, autizmus, gyermekpszichológia, diagnosztika, Budapest,adhd,ad-hd">
-    
+    <meta name="keywords"
+        content="pszichiáter, autizmus, gyermekpszichológia, diagnosztika, Budapest,adhd,ad-hd,gyerek,pszi">
+
+
     <title>Dr. Szerző Nelli gyermek- és ifjúságpszichiáter</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://nurify-medical.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://nurify-medical.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://nurify-medical.com/favicon-16x16.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +40,8 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="#"><i class="bi bi-rainbow"></i> Dr. Szerző Nelli</a>
+                <a class="navbar-brand" href="#"> <img src="https://nurify-medical.com/favicon-32x32.png" alt=""> Dr.
+                    Szerző Nelli</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -70,9 +78,9 @@
                             ifjúságpszichiáter szakorvos<br>
                             autizmus specifikus szakember</p>
                     </div>
-                    <div class="col-12 col-md-6 text-center text-md-end">
+                    <div class="col-12 col-md-6 text-center text-md-end slide-in-bottom">
                         <img src="https://static.wixstatic.com/media/dea0fe_d9e71105cb2c48fdb2657587e485622b~mv2.png/v1/crop/x_69,y_0,w_583,h_757/fill/w_578,h_757,al_c,q_90,enc_auto/Szerzo%20Nelli%20profil%20(1)%20(2).png"
-                            class="img-fluid hero-img rounded-1 shadow w-100" alt="dr szerzo nelli">
+                            class="img-fluid hero-img rounded-4 shadow w-100" alt="dr szerzo nelli">
                     </div>
                 </div>
             </div>
@@ -172,7 +180,7 @@
         <section class="parallax">
             <div class="parallax_child"></div>
         </section>
-        
+
         <section class="helptou" id="helptou">
             <div class="container">
                 <div class="row gy-4">
@@ -199,11 +207,11 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
                     <div class="footer-bord bg-white p-4 p-md-5 rounded">
-                        <h2 class="text-center mb-5 fs-1 text-secondary"
+                        <h2 class="text-center mb-5 fs-1 text-secondary slide-in-left"
                             style="font-family: 'Playfair Display', serif;">Kapcsolatfelvétel</h2>
                         <div class="row gy-4">
                             <div class="col-12 col-md-7">
-                                <form action="index.php" method="GET">
+                                <form action="contact.php" method="POST">
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Teljesnév</label>
                                         <small>*</small>
@@ -245,7 +253,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="col-12 col-md-5 ">
+                            <div class="col-12 col-md-5 slide-in-left">
                                 <img src="media/kapcsolat_fent2.jpg" class="img-fluid rounded" alt="kapcsolat">
                             </div>
                         </div>
@@ -281,52 +289,7 @@
     </footer>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, {
-                threshold: 0.1,
-            });
-            const slideInElements = document.querySelectorAll('.slide-in, .slide-in-right');
-            slideInElements.forEach((element) => {
-                observer.observe(element);
-            });
-        });
-
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarNav = document.querySelector('#navbarNav');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        navbarToggler.addEventListener('click', () => {
-            navbarNav.classList.toggle('collapse');
-            navbarNav.classList.toggle('show');
-        });
-
-
-        document.addEventListener('click', (event) => {
-            if (!event.target.closest('.navbar-nav, .navbar-toggler')) {
-                navbarNav.classList.remove('show');
-                navbarNav.classList.add('collapse');
-            }
-        });
-
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 992) {
-                    navbarNav.classList.remove('show');
-                    navbarNav.classList.add('collapse');
-                }
-            });
-        });
-
-    </script>
+    <script src="/logic.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 

@@ -282,3 +282,53 @@ footer .container>h2 {
         padding: 1.5rem;
     }
 }
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.slide-in-left.active {
+    animation: slideInLeft 0.8s forwards;
+}
+
+.slide-in-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.slide-in-bottom.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .helptou img {
+        max-width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .slide-in-right {
+        transform: translateX(50px); /* kisebb távolság mobil nézetben */
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .slide-in-right.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
