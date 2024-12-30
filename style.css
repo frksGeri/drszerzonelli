@@ -76,22 +76,25 @@ i{
 }
 
 .parallax{
-    position: relative;
+    perspective: 1px;
     height: 300px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
 .parallax .parallax_child{
-    background-image: url(media/pallarax2.png); 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
     position: absolute;
-    width: 100%;
-    object-position: right top;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 0;
+    transform: translateZ(-1px) scale(2)q;
+    z-index: -1;
+    background-image: url(media/pallarax2.png);
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -285,9 +288,10 @@ footer .container>h2 {
     }
     .parallax .parallax_child{
        
-      background-position: left;
-      
-       
+        transform: translateY(var(--scroll-y));
+        transition: transform 0.1s linear;
+        background-attachment: fixed;
+        background-position-x: left;
     }
 }
 
