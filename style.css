@@ -93,6 +93,12 @@ i{
     width: 100%;
     object-position: right top;
 }
+@supports (-webkit-touch-callout: none) {
+    .parallax .parallax_child {
+        background-attachment: scroll; /* fixed helyett scroll iOS-en */
+        background-position: center center;
+    }
+}
 
 /* About section reszponzív stílusok */
 .about img {
