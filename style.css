@@ -1,5 +1,5 @@
 html,body {
-    background-color: #f4f2f3;
+    background-color: #f6f5f5;
     max-width: 100%;
     overflow-x: clip;
    
@@ -77,13 +77,13 @@ i{
 
 .parallax{
     position: relative;
-    height: 150px;
+    height: 300px;
     overflow: hidden;
 }
 
 
 .parallax .parallax_child{
-    background-image: url(media/bg.png); 
+    background-image: url(media/pallarax2.png); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -91,6 +91,7 @@ i{
     height: 100%;
     position: absolute;
     width: 100%;
+    object-position: right top;
 }
 
 /* About section reszponzív stílusok */
@@ -99,6 +100,7 @@ i{
     height: auto;
     margin-bottom: 2rem;
 }
+
 
 /* Studies section reszponzív stílusok */
 
@@ -156,11 +158,6 @@ i{
     transition-delay: 1s;
 }
 
-section:nth-child(4n) {
-    background-color: #f4f2f3;
-   
-}
-
 .slide-in-right {
     opacity: 0;
     transform: translateX(100px);
@@ -200,6 +197,24 @@ section:nth-child(4n) {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.symptoms .accordion{
+    background-color: #f6f5f5 !important;
+    --bs-accordion-bg:#f6f5f5 !important;
+}
+.symptoms .accordion .accordion-button{
+    border-bottom:2px solid rgba(0,0,0,0.08)
+  }
+.symptoms .accordion .accordion-body{
+  border-bottom:2px solid rgba(0,0,0,0.08)
+}
+.accordion-button:not(.collapsed){
+    color:#000000 !important;
+    background-color:#f5a74109 !important;
+}
+.accordion-button:focus {
+    box-shadow: none !important;
 }
 
 /* Footer reszponzív stílusok */
@@ -266,6 +281,9 @@ footer .container>h2 {
 
     .pt-5 {
         padding-top: 2rem; 
+    }
+    .parallax .parallax_child{
+        background-position: left;
     }
 }
 
