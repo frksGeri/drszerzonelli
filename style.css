@@ -284,9 +284,10 @@ footer .container>h2 {
         padding-top: 2rem; 
     }
     .parallax .parallax_child{
-        background-attachment: scroll;
-        transform: translateX(-30%); /* A kép balra mozgatása */
-        background-size: cover;
+       
+      background-position: left;
+      
+       
     }
 }
 
